@@ -1,0 +1,26 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Entornos y dependencias
+.env
+.env.*
+!.env.example
+node_modules/
+vendor/
+
+# Compilación y pruebas
+dist/
+build/
+coverage/
+*.log
+
+# Archivos temporales
+*.tmp
+*.bak
