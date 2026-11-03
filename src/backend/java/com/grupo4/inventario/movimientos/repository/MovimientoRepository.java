@@ -12,6 +12,7 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDateTime;
 
 /**
  * Acceso a datos del módulo de movimientos.
@@ -83,7 +84,7 @@ public class MovimientoRepository {
 
                 connection.commit();
                 return new Movimiento(movimientoId, productoId, tipo, cantidad,
-                        stockAnterior, stockNuevo, observacion, null);
+                        stockAnterior, stockNuevo, observacion, LocalDateTime.now());
             } catch (Exception exception) {
                 connection.rollback();
                 if (exception instanceof SQLException sqlException) {
